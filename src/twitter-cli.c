@@ -72,7 +72,7 @@ int twitter_oauth_interactive()
 int check_config(oauth_t *oauth)
 {
 
-	config_init(&config, "./config.json");
+	config_init(&config, NULL);
 	*oauth = config_get_oauth(&config);
 
 	if(oauth->token == NULL) {
