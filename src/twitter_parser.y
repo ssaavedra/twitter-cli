@@ -38,6 +38,8 @@ extern int yylex();
 
 %error-verbose
 
+%parse-param {json_t *param}
+
 %token <j> STRING
 %token <j> NUMBER
 %token <j> TRUE
